@@ -1,14 +1,14 @@
 
 function newItem() {
 
-    //javascript
+    //Initial JAVASCRIPT
     //1. Adding a new item to the list of items: 
     //let li = document.createElement("li");
     //let inputValue = document.getElementById("input").value;
     //let text = document.createTextNode(inputValue);
     //li.appendChild(text);
 
-    //jQuery
+    //New JQUERY
     //1. Adding a new item to the list of items: 
     //Transform of javascript lines of code upper into jQuery
     //Allow each <li> (list item) to be stored inside the li variable
@@ -16,7 +16,7 @@ function newItem() {
     //Allow to get the inputs of the user (inside the input field bar on the webpage) and store it inside the variable inputValue
     let inputValue = $('#input').val();
     //Allow to append the input from a user stored inside the inputValue variable to a <li> from the li variable
-    li.appendChild(inputValue);
+    li.append(inputValue);
 
     //Display error message of user write nothing in the input bar
     if (inputValue === '') {
@@ -26,7 +26,7 @@ function newItem() {
         $('#list').append(li);
     }
 
-    //javascript
+    //Initial JAVASCRIPT
     //2. Crossing out an item from the list of items:
     //function crossOut() {
     //li.classList.toggle("strike");
@@ -34,7 +34,7 @@ function newItem() {
 
     //li.addEventListener("dblclick",crossOut);
 
-    //jQuery
+    //New JQUERY
     //2. Crossing out an item from the list of items:
     //Transform of javascript lines of code upper into jQuery
     function crossOut() {
@@ -46,7 +46,7 @@ function newItem() {
         li.toggleClass("strike");
     });
 
-    //javascript
+    //Initial JAVASCRIPT
     //3(i). Adding the delete button "X": 
     //let crossOutButton = document.createElement("crossOutButton");
     //crossOutButton.appendChild(document.createTextNode("X"));
@@ -58,15 +58,15 @@ function newItem() {
     //li.classList.add("delete")
     //}
 
-    //jQuery
+    //New JQUERY
     //3(i). Adding the delete button "X": 
     //Transform of Javascript lines of code upper into jQuery
     //Allow each <crossOutButton> to be stored inside the crossOutButton variable
     let crossOutButton = $('<crossOutButton></crossOutButton>');
     //Allow the creation of the 'X' beside each item elements from the list
-    crossOutButton.appendChild(document.createTextNode("X"));
+    crossOutButton.append(document.createTextNode("X"));
     //Allow to append the 'X' to each list item created by a user
-    li.appendChild(crossOutButton);
+    li.append(crossOutButton);
 
     //Call the deleteListItem function whenever a user click on a crossOutButton ('X')
     crossOutButton.on("click", deleteListItem);
