@@ -1,4 +1,3 @@
-
 function newItem() {
 
     //Initial JAVASCRIPT
@@ -81,4 +80,3 @@ function newItem() {
     $('#list').sortable();
 
 }
-
